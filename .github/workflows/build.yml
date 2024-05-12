@@ -3,14 +3,17 @@ name: LaTeX PDF Build
 on:
   push:
     branches:
-      - main  # Triggers the workflow on every push to the 'main' branch.
-  workflow_dispatch:  # Allows manual triggering of the workflow.
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write  # This permission allows workflows to upload assets, create releases, etc.
 
 jobs:
   build_pdf:
     runs-on: ubuntu-latest
     container:
-      image: docker.io/texlive/texlive:latest  # Use a Docker image with a full TeX Live installation.
+      image: docker.io/texlive/texlive:latest
 
     steps:
     - name: Checkout Repository
@@ -35,8 +38,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
+        tag_name: ${{ github.ref_name }}
+        release_name: Release ${{ github.ref_name }}
         draft: false
         prerelease: false
 
