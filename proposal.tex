@@ -1,12 +1,41 @@
-\documentclass[12pt]{article}
+\documentclass[11pt, titlepage, a4paper]{article}
 \usepackage[utf8]{inputenc}
+\usepackage{csquotes} 
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{authblk}
+\usepackage[a4paper]{geometry}
 \usepackage{hyperref}
+\usepackage[english]{babel}
+\usepackage{lineno}
+\usepackage{pgfgantt}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[backend=biber, style=ieee, sorting=none, url=true]{biblatex}
+\addbibresource{MA_Proposal.bib} % Imports bibliography file
+
 
 \title{The Role of Digital Twins in Modulating Public Opinion on Wind Power Plants}
 \author{Emily Sterthaus \\ Matriculation Number: 451 342 \\ \href{mailto:m_ster15@uni-muenster.de}{m\_ster15@uni-muenster.de}}
+\affil{Institute of Geoinformatics, University of Münster}
 \date{\today}
+
+\geometry{
+    a4paper,
+    left=2.5cm,
+    right=2.5cm,
+    top=2.5cm,
+    bottom=2.5cm
+}
+
+
+\definecolor{barblue}{RGB}{153,204,255}
+\definecolor{groupblue}{RGB}{51,102,254}
+\definecolor{linkred}{RGB}{165,0,33}
+
+\newlist{questions}{enumerate}{2}
+\setlist[questions,1]{label=RQ\arabic*.,ref=RQ\arabic*}
+\setlist[questions,2]{label=(\alph*),ref=\thequestionsi(\alph*)}
 
 \begin{document}
 
@@ -14,23 +43,123 @@
 
 
 \newpage
+\begin{linenumbers}
+    \section{Introduction}
+    The siting of wind turbines is a multifaceted issue, fraught with complexity and political nuances. Onshore
+    turbine placement is governed by a myriad of regulations, incorporating a range of parameters including, but not
+    limited to: minimum distance to residential buildings, the foundation may only stand on a parcel of land and the
+    turbines need a minimum distance between each other
+    \cite{niedersachsischesministeriumfurumweltenergieundklimaschutzPlanungUndGenehmigung2021}.
 
-\section{Introduction}
+    However, the public perception of wind turbines is often negative, with many people citing noise pollution, visual impairment and the potential for bird strikes as reasons for their opposition to wind power plants. This is despite the fact that wind power is a clean, renewable energy source that can help to reduce greenhouse gas emissions and combat climate change.
 
-
-\section{Background and Literature Review}
-
-
-\section{Objectives}
-
-
-\section{Methodology}
-
-
-\section{Timeline}
+    This leads to a situation where the siting of wind turbines is often met with resistance from local communities, who may be concerned about the impact of the turbines on their quality of life. This makes it a heavy politicized issue, with local governments often facing opposition from residents when trying to approve new wind power projects \cite{kwasniewskiWindenergieVerhindertAntiWindkraftBewegung2021}.
 
 
+    \section{Background and Literature Review}
+    %Todo: Literatur Recherche
 
+    \section{Research Questions}
+    % Reicht das als research question? 
+    Following that the specific research question to be answered by the thesis are:
+    \begin{questions}
+        \item How can a digital twin be used to simulate any physical and environmental impacts of wind turbines on their surroundings?
+        \item How can a digital twin influence public opinion on wind power plants?
+    \end{questions}
+
+    \section{Objectives}
+    \subsection{General Objective}
+    The objective of this research is to explore the potential of digital twins to impact public opinion regarding wind energy installations. The project involves the development of a digital twin for a wind power facility to accurately simulate and visualize its environmental effects. This initiative is designed to provide stakeholders with a detailed assessment of both the benefits and limitations associated with wind turbines, thereby aiding in the decision-making process for future developments.
+
+    The digital twin is conceived as an interactive 3D application that allows users to traverse a specified test area, install turbines, and observe their influence on the local environment. The application is equipped to simulate aspects such as noise pollution and visual impairments, which include changes in the landscape and shadow effects caused by the turbines.
+
+    Additionally, the digital twin will evaluate the risk of bird strikes and analyze the energy output and potential savings over determined periods. It will include a feature to ensure that turbine placements comply with existing legal frameworks and zoning regulations.
+
+    Technologically, the digital twin will integrate various datasets to enhance its realism and functionality. It will support Esri i3s Meshes, incorporate weather data from DWD, and use land use classifications from local planning documents % (FNP? Bebauungsplan?)
+    to ensure optimal turbine placement based on environmental and regulatory considerations. The application will also provide a comprehensive selection of turbine models, enabling stakeholders to choose configurations that best fit their requirements.
+
+    An extensive user study will be conducted to evaluate the usability of the digital twin, focusing on the ease with which users can interact with and understand the application. Additionally, the study will assess the influence of the digital twin on users perceptions of wind energy, specifically looking at changes in attitude and support for wind energy initiatives resulting from their interaction with the twin.
+
+
+
+
+
+    \subsection{SMART Objectives}
+    As the goals beforehand describe the general objective of the thesis, the SMART objectives will describe the specific goals of the thesis. The SMART objectives are as follows:
+    \begin{itemize}[label={--}]
+        \item Develop a digital twin interactive 3D application  that allows users to navigate a specific test area and place turbines to assess their visual and noise impact on the surroundings.
+        \item Implement a feature  in the digital twin to simulate the visual impairment caused by wind turbines, including shadow casting and changes to the landscape.
+        \item Introduce a noise pollution simulation within the digital twin to quantify the acoustic impact of wind turbines at various distances and under different weather conditions.
+        \item Develop a module for simulating bird strikes as a part of the digital twin’s environmental impact assessment.
+        \item Integrate an energy analysis tool into the digital twin  that calculates real-time energy generation and potential energy savings from placed turbines over specified periods.
+        \item Incorporate a legal assessment tool  in the digital twin to verify turbine placements against local regulations and zoning requirements.
+        \item Support Esri i3s Meshes for realistic terrain modeling, providing a detailed and accurate representation of the test area.
+        \item Integrate weather data from DWD into the digital twin.
+        \item Incorporate land use classifications from local plans into the digital twin by to ensure the placement of turbines is optimized according to zoning regulations and environmental suitability.
+        \item Provide a comprehensive catalog of turbine models, to allow stakeholders to choose from various options based on their specifications and needs.
+        \item Develop and integrate a module for evaluating inter-turbine interactions, such as wake steering, into the digital twin \cite{howlandWindFarmPower2019a}.
+        \item  Design and implement a user-friendly interface for the digital twin, focusing on intuitive navigation and interaction to ensure that stakeholders can effectively utilize the application without prior technical expertise.
+        \item Conduct a comprehensive user study to evaluate the usability of the digital twin prototype. This study will assess participants' ease of understanding and interacting with the application, aiming to confirm that the interface and functionalities are intuitively designed.
+        \item Perform a targeted analysis to determine the influence of the digital twin on participants' opinions regarding wind energy. This evaluation will measure shifts in perception and support for wind energy projects as a direct outcome of using the application.
+    \end{itemize}
+
+
+    \section{Methodology}
+
+
+    \section{Timeline}
+
+    \begin{figure}[h]
+        \centering
+        \begin{ganttchart}[
+                hgrid,
+                vgrid={*1{dotted}},
+                x unit=2.6cm, % Adjust this value to fit the chart properly
+                y unit chart=0.75cm,
+                y unit title=0.75cm,
+                time slot format=isodate,
+                time slot unit=month,
+                bar/.append style={fill=barblue},
+                group/.append style={fill=groupblue},
+                link/.style={-latex, linkred},
+                inline,
+                bar label font=\footnotesize, % This reduces the font size of bar labels
+                title label font=\footnotesize, % This reduces the font size of title labels
+                title height=1,
+                milestone/.append style={shape=diamond, fill=orange, inner sep=1.5pt}
+            ]{2024-06-01}{2024-11-01}
+
+            \gantttitlecalendar{year, month} \\
+            \ganttbar[name=writing]{Writing and Taking Notes}{2024-06-01}{2024-11-30} \\
+            \ganttbar[name=acquiring]{Acquiring Data}{2024-06-01}{2024-06-30} \\
+            \ganttbar[name=impl_datasets]{Impl. Datasets}{2024-07-01}{2024-07-30} \\
+            \ganttmilestone[name=data_comp]{Datasets Complete}{2024-07-30} \\
+            \ganttbar[name=eval_legal]{Eval. Legal Restrictions}{2024-06-01}{2024-07-30} \\
+            \ganttbar[name=impl_legal]{Impl. Legal Restrictions}{2024-07-01}{2024-08-30} \\
+            \ganttbar[name=impl_visual]{Impl. Visual Analyses}{2024-07-01}{2024-09-30} \\
+            \ganttbar[name=impl_noise]{Impl. Noise Analyses}{2024-08-01}{2024-09-30} \\
+            \ganttbar[name=impl_env]{Impl. Environmental Analyses}{2024-08-01}{2024-09-30} \\
+            \ganttmilestone[name=prot_comp]{Prototype Complete}{2024-09-30} \\
+            \ganttbar[name=user_study1]{User Study 1}{2024-10-01}{2024-10-30} \\
+            \ganttbar[name=user_study2]{User Study 2}{2024-10-01}{2024-10-30} \\
+            \ganttmilestone[name=study_comp]{User Study Complete}{2024-10-30} \\
+
+            % Add links
+            \ganttlink{acquiring}{impl_datasets}
+            %\ganttlink{impl_datasets}{data_comp}
+            \ganttlink{eval_legal}{impl_legal}
+
+
+        \end{ganttchart}
+        \caption{Schedule of my Master Thesis}
+        \label{fig:time_shedule}
+    \end{figure}
+
+
+
+\end{linenumbers}
+\clearpage
+\printbibliography
 
 
 
