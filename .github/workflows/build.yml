@@ -1,22 +1,31 @@
-name: Build LaTeX document
-on: [push]
+name: LaTeX PDF Build
+
+on:
+  push:
+    branches:
+      - main  # Triggers the workflow on every push to the 'main' branch.
+  workflow_dispatch:  # Allows manual triggering of the workflow.
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  build_pdf:
+    runs-on: ubuntu-latest  # Runs the workflow on an Ubuntu Linux runner.
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+    - name: Checkout Repository
+      uses: actions/checkout@v3  # Retrieves the latest code from the GitHub repository.
 
-    - name: Install LaTeX
-      run: sudo apt-get install texlive-full
+    - name: Set up LaTeX
+      run: sudo apt-get install texlive-full  # Installs a full LaTeX environment.
 
-    - name: Build PDF
-      run: pdflatex -interaction=nonstopmode proposal.tex
+    - name: Compile LaTeX document to PDF
+      run: |
+        pdflatex -interaction=nonstopmode proposal.tex 
+        bibtex MA_Proposal 
+        pdflatex -interaction=nonstopmode proposal.tex 
+        pdflatex -interaction=nonstopmode proposal.tex  
 
-    - name: Upload PDF
-      uses: actions/upload-artifact@v2
+    - name: Upload PDF as Artifact
+      uses: actions/upload-artifact@v3
       with:
-        name: PDF-output
-        path: '*.pdf'
+        name: compiled-pdf
+        path: '*.pdf'  # The path to the generated PDF file.
