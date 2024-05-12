@@ -8,24 +8,23 @@ on:
 
 jobs:
   build_pdf:
-    runs-on: ubuntu-latest  # Runs the workflow on an Ubuntu Linux runner.
+    runs-on: ubuntu-latest
+    container:
+      image: docker.io/texlive/texlive:latest  # Use a Docker image with a full TeX Live installation.
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v3  # Retrieves the latest code from the GitHub repository.
-
-    - name: Set up LaTeX
-      run: sudo apt-get install texlive-full  # Installs a full LaTeX environment.
+      uses: actions/checkout@v3
 
     - name: Compile LaTeX document to PDF
       run: |
         pdflatex -interaction=nonstopmode proposal.tex 
-        bibtex MA_Proposal 
-        pdflatex -interaction=nonstopmode proposal.tex 
+        bibtex MA_Proposal  
+        pdflatex -interaction=nonstopmode proposal.tex  
         pdflatex -interaction=nonstopmode proposal.tex  
 
     - name: Upload PDF as Artifact
       uses: actions/upload-artifact@v3
       with:
         name: compiled-pdf
-        path: '*.pdf'  # The path to the generated PDF file.
+        path: '*.pdf'
