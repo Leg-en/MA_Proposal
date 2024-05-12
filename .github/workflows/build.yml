@@ -19,7 +19,7 @@ jobs:
     - name: Compile LaTeX document to PDF
       run: |
         pdflatex -interaction=nonstopmode proposal.tex 
-        bibtex MA_Proposal  
+        bibtex proposal  
         pdflatex -interaction=nonstopmode proposal.tex  
         pdflatex -interaction=nonstopmode proposal.tex  
 
