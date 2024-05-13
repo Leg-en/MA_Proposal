@@ -63,7 +63,7 @@
     % Reicht das als research question? 
     Following that the specific research question to be answered by the thesis are:
     \begin{questions}
-        \item How can a digital twin be used to simulate any physical and environmental impacts of wind turbines on their surroundings?
+        \item How can a digital twin be used to simulate physical and environmental impacts of wind turbines on their surroundings?
         \item How can a digital twin influence public opinion on wind power plants?
     \end{questions}
 
@@ -106,10 +106,25 @@
 
     \section{Methodology}
     The methodology for this research project will involve a combination of data acquisition, software development, and user studies. The project will be divided into several phases, each focusing on a specific aspect of the digital twin development and evaluation process.
-
     \subsection{Data Acquisition}
-    
+
+    Data acquisition is a pivotal component in the development of the digital twin, necessitating a systematic approach to collate multifarious datasets. This approach ensures an encompassing environmental and regulatory context, essential for accurate simulation and analysis. The following datasets will be acquired:
+
+    \begin{itemize}
+        \item \textbf{Terrain Data:} High-resolution terrain models are crucial for assessing site suitability and environmental impacts. We will utilize Esri Indexed 3D Scene Layers (i3s) Meshes, supplied by the Free State of Saxony, facilitated through a partnership with con terra.
+
+        \item \textbf{Meteorological Data:} Specifically, wind data is integral for the site selection and optimization of wind turbine placements. This dataset will be sourced from the Deutscher Wetterdienst (DWD), which provides detailed wind statistics critical for wind energy applications in Germany \cite{deutscherwetterdienstWinddatenFurWindenergienutzer}.
+
+        \item \textbf{Land Use Classifications and Zoning Information:} Essential for legal compliance and environmental planning, land use and zoning data will be sourced from the Saxony Open Data Portal \cite{freistaatsachsenOpenDataPortal}. This information facilitates the assessment of site suitability and regulatory alignment for wind turbine installation.
+
+        \item \textbf{Wind Turbine Specifications:} Information regarding various wind turbine models will primarily be sourced from Enercon’s comprehensive product portfolio \cite{enerconglobalgmbhENERCONWindenergieanlagen}. To ensure a broader representation of available technologies, additional inquiries may be made to other turbine manufacturers, thereby expanding our dataset with diverse turbine types and specifications.
+    \end{itemize}
+
+    Integration of these datasets into the digital twin is anticipated to be straightforward, leveraging the capabilities of map.apps within an ArcGIS Enterprise Environment, supported by the data transformation and integration functionalities of Feature Manipulation Engine (FME).
+
+
     \subsection{Development}
+
     \subsection{User Study}
 
     \section{Timeline}
