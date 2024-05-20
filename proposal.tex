@@ -11,8 +11,11 @@
 \usepackage{pgfgantt}
 \usepackage{xcolor}
 \usepackage{enumitem}
+\usepackage{cleveref}
+
 \usepackage[backend=biber, style=ieee, sorting=none, url=true]{biblatex}
 \addbibresource{proposal.bib} % Imports bibliography file
+
 
 
 \title{The Role of Digital Twins in Modulating Public Opinion on Wind Power Plants}
@@ -36,6 +39,11 @@
 \newlist{questions}{enumerate}{2}
 \setlist[questions,1]{label=RQ\arabic*.,ref=RQ\arabic*}
 \setlist[questions,2]{label=(\alph*),ref=\thequestionsi(\alph*)}
+
+% Customizing cref format
+\crefformat{questionsi}{#2#1#3}
+\crefformat{questionsii}{#2#1#3}
+
 
 \begin{document}
 
@@ -63,8 +71,8 @@
     % Reicht das als research question? 
     Following that the specific research question to be answered by the thesis are:
     \begin{questions}
-        \item How can a digital twin be used to simulate physical and environmental impacts of wind turbines on their surroundings?
-        \item How can a digital twin influence public opinion on wind power plants?
+        \item \label{rq:first_q} How suitable is a digital twin for simulating various aspects of wind energy in a way that people can understand?
+        \item \label{rq:second_q} How can a digital twin influence public opinion on wind power plants?
     \end{questions}
 
     \section{Objectives}
@@ -135,10 +143,18 @@
     Should there be limitations in developing solely in JavaScript for the frontend, an additional Python component may be introduced to enable more advanced analysis capabilities.
 
 
-
-    \subsection{User Study}
     %Todo: Wie führt man eine User Study durch?
     %Todos: Studien Art? Gibt es eine kontrollgrupe? Wie sieht die studie aus? Wie viele teilnehmer? Wie werden die teilnehmer ausgewählt? Wie wird die studie ausgewertet?
+    \subsection{User Study}
+    As part of this thesis, a user study will be conducted to address the primary research questions \cref{rq:first_q} and \cref{rq:second_q}. The study will be divided into two distinct parts. The first part will concentrate on evaluating the usability of the digital twin, assessing user comprehension and experience across all aspects of the digital twin. The second part will investigate the impact of the digital twin on public opinion regarding wind power plants, examining whether users' opinions shift after interacting with the software.
+    
+    The initial segment of the study will employ qualitative methods, involving at least five participants. There will be no prerequisites for participation, particularly concerning their pre-existing opinions on wind power plants. This phase will adopt a Task Analysis approach, where participants will be assigned a series of tasks to complete using the digital twin. These tasks will be designed to test all facets of the digital twin. Throughout the task completion process, participants will be observed, and the observer will take detailed notes on user interactions and experiences. Post-task, participants will be requested to complete a questionnaire, providing feedback on their experience and rating the software.
+    
+    The second segment of the study will adopt a quantitative approach, utilizing the same participant group. Participants will complete a questionnaire both before and after using the software. This questionnaire will gauge their opinions on wind power plants, designed to measure any shifts in perspective resulting from the software interaction. The comparative analysis of the pre- and post-use questionnaires will reveal any changes in opinion attributable to the digital twin.
+    
+    Finally, the study outcomes will be thoroughly evaluated. For the first part, evaluation will be based on observational notes and questionnaire responses. For the second part, a comparative analysis of the pre- and post-use questionnaire results will be conducted. The findings will address the research questions, evaluating both the usability of the digital twin and its influence on public opinion regarding wind power plants. Additionally, recommendations for software improvement will be provided, though the implementation of these improvements will fall outside the scope of this thesis.
+    
+
     \section{Timeline}
     This section outlines the detailed timeline for the master's thesis, scheduled between June 2024 and November 2024.
     The progress of activities is visually represented in Figure \ref{fig:time_shedule}, where each stage of the project is marked by specific milestones to track advancements and ensure timely completion of the thesis.
