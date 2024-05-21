@@ -68,14 +68,16 @@
 
     This leads to a situation where the siting of wind turbines is often met with resistance from local communities, who may be concerned about the impact of the turbines on their quality of life. This makes it a heavy politicized issue, with local governments often facing opposition from residents when trying to approve new wind power projects \cite{kwasniewskiWindenergieVerhindertAntiWindkraftBewegung2021}.
 
-
     \section{Background and Literature Review}
     %Todo: Schön klingen lassen... 
     \subsection{Digital Twins}
     Digital twins are a relatively new concept that has gained popularity in recent years, it was first  mentioned in the year 2000. In the more narrow definition it is an exact mirror image of the real world, mirroring all elements and processes of the real world. But in more recent years a wider definition took that place. Today a digital twin is a simulation model that operate alongside real-time processes, applying to social and economic systems as well as physical systems. Therefore, a digital twin is an abstraction or a model of the real world \cite{battyDigitalTwins2018}.
     And as such digital twins are adopted by several disciplines, such as manufacturing, automotive and energy sector, solving different problems in each sector. As replicas of the world they optimally for integrating solution to complex analysis and decision support \cite{pylianidisIntroducingDigitalTwins2021}.
     \subsection{Technical Aspects}
-    A fundamental aspect of this thesis is the use of 3D Meshes. Specifically Esri/OGC i3s meshes. 
+    A fundamental aspect of this thesis is the use of 3D Meshes. Specifically Esri/OGC i3s meshes. The i3s format allow streaming and distribute 3D Content across various (enterprise) systems. A single i3s dataset, known as a scene layer, acts as a container for vast amounts of diverse 3D geographic data. To fully define a scene layer a layer type and a layer profile are needed.
+    i3s also allows various kinds of data types. It can be 3D Objects, an Integrated Mesh, a Point Cloud or even a building scene layer. It is especially with Web, Mobile and Cloud usecases in mind designed. It is also created by esri but part of the OGC Standards. \cite{esriincI3sspec}.
+
+    As map.apps is based on Esris ArcGIS Maps SDK for JavaScript a given i3s layer can be trivial integrated into the app. 
     \subsection{Wind Energy}
     As climate change is a growing concern, the need for renewable energy sources is becoming more and more important. The EU aims to be carbon neutral by 2050. In order to reach that goal renewable energy source are one of the important factors \cite{europeancommission.directorategeneralforclimateaction.GoingClimateneutral20502019}. Wind Turbines may be one solution for this, as they are a clean and renewable energy source, with basically no greenhouse gas emissions \cite{pryorClimateChangeImpacts2020}.
     Therefore, Germany aims to increase the share of renewable energy sources. One spatial aspect is to allocate 2\% of the land area for wind energy, with the goal to produce by the end of 2030 115GW of wind energy \cite{WindenergieLand}.
@@ -174,7 +176,7 @@
     This section outlines the detailed timeline for the master's thesis, scheduled between June 2024 and November 2024.
     The progress of activities is visually represented in Figure \ref{fig:time_shedule}, where each stage of the project is marked by specific milestones to track advancements and ensure timely completion of the thesis.
 
-   
+
     Key activities of this project encompass the acquisition and integration of datasets, the evaluation of legal constraints, and the implementation of both visual and analytical models. These phases are concluded by user studies designed to validate the developed models. The completion of the prototype and the subsequent user study are marked by specific milestones, ensuring the project adheres to its timeline and achieves the established objectives.
 
     The detailed tasks for each project phase are outlined in the following sections:
@@ -189,7 +191,7 @@
         \item \textbf{Implementation of Noise Analyses:} During this three weeks phase, noise-based analyses are implemented, including noise pollution simulations. These simulations enable stakeholders to assess the acoustic impact of wind turbines at various distances.
         \item \textbf{Gather Testing Group:} This phase, which spans six weeks, involves recruiting participants for the user study. The testing group will be selected based on specific criteria to ensure a diverse and representative sample.
         \item \textbf{Creating User Study:} Over the course of three weeks, the user study will be designed, including the development of questionnaires and tasks for participants.
-        \item \textbf{User Study:} This four-week phase involves conducting the user study, where participants will interact with the digital twin and complete the assigned tasks. 
+        \item \textbf{User Study:} This four-week phase involves conducting the user study, where participants will interact with the digital twin and complete the assigned tasks.
         \item \textbf{Evaluation of User Study:} The final phase, lasting three weeks, involves evaluating the user study results to determine the impact of the digital twin on participants opinions regarding wind power plants. The findings will be analysed and used to address the research questions.
     \end{itemize}
     \begin{landscape}
@@ -210,7 +212,7 @@
                     title height=1,
                     milestone/.append style={shape=diamond, fill=orange, inner sep=1.5pt}
                 ]{1}{24} % Adjust the range to cover 24 weeks
-    
+
                 % Custom titles for weeks
                 \gantttitle{W1}{1}
                 \gantttitle{W2}{1}
@@ -236,7 +238,7 @@
                 \gantttitle{W22}{1}
                 \gantttitle{W23}{1}
                 \gantttitle{W24}{1} \\
-    
+
                 \ganttbar[name=writing]{Writing and Taking Notes}{1}{24} \\
                 \ganttbar[name=acquiring]{Acquiring Data}{1}{4} \\
                 \ganttbar[name=impl_datasets]{Impl. Datasets}{5}{6} \\
@@ -251,11 +253,11 @@
                 \ganttbar[name=user_study_prep]{User Study}{16}{19} \\
                 \ganttbar[name=user_study_prep]{Eval. User Study}{20}{22} \\
                 \ganttmilestone[name=study_comp]{User Study Complete}{22} \\
-    
+
                 % Add links
                 \ganttlink{acquiring}{impl_datasets}
                 \ganttlink{eval_legal}{impl_legal}
-    
+
             \end{ganttchart}
             \caption{Schedule of my Master Thesis}
             \label{fig:time_shedule}
