@@ -19,7 +19,11 @@
 \usepackage[backend=biber, style=ieee, sorting=none, url=true]{biblatex}
 \addbibresource{proposal.bib} % Imports bibliography file
 
-
+% Customize URL appearance
+%\urlstyle{same} % Keeps the URL in the same font as the main text
+\hypersetup{
+    breaklinks=true
+}
 
 \title{The Role of Digital Twins in Modulating Public Opinion on Wind Power Plants}
 \author{Emily Sterthaus \\ Matriculation Number: 451 342 \\ \href{mailto:m_ster15@uni-muenster.de}{m\_ster15@uni-muenster.de}}
@@ -59,7 +63,7 @@
 \begin{linenumbers}
     \section{Introduction}
     The siting of wind turbines is a multifaceted issue, fraught with complexity and political nuances. Onshore
-    turbine placement is governed by a myriad of regulations, incorporating a range of parameters including, but not
+    turbine placement is governed by a myriad of regulations, e.g., in Lower Saxony incorporating a range of parameters including, but not
     limited to: minimum distance to residential buildings, the foundation may only stand on a parcel of land and the
     turbines need a minimum distance between each other
     \cite{niedersachsischesministeriumfurumweltenergieundklimaschutzPlanungUndGenehmigung2021}.
@@ -77,13 +81,19 @@
     A fundamental aspect of this thesis is the use of 3D Meshes. Specifically Esri/OGC i3s meshes. The i3s format allow streaming and distribute 3D Content across various (enterprise) systems. A single i3s dataset, known as a scene layer, acts as a container for vast amounts of diverse 3D geographic data. To fully define a scene layer a layer type and a layer profile are needed.
     i3s also allows various kinds of data types. It can be 3D Objects, an Integrated Mesh, a Point Cloud or even a building scene layer. It is especially with Web, Mobile and Cloud usecases in mind designed. It is also created by esri but part of the OGC Standards. \cite{esriincI3sspec}.
 
-    As map.apps is based on Esris ArcGIS Maps SDK for JavaScript a given i3s layer can be trivial integrated into the app. 
+    As map.apps is based on Esris ArcGIS Maps SDK for JavaScript a given i3s layer can be trivial integrated into the app.
+    The ArcGIS Maps SDK for JavaScript also allow further analysis tools, when a ArcGIS Enterprise Environment is available. Relevant for this project are especially shadow analysis \cite{esriincShadowCast} and Viewshed tools \cite{esriincGeoprocessingViewshedAnalysis}.
     \subsection{Wind Energy}
     As climate change is a growing concern, the need for renewable energy sources is becoming more and more important. The EU aims to be carbon neutral by 2050. In order to reach that goal renewable energy source are one of the important factors \cite{europeancommission.directorategeneralforclimateaction.GoingClimateneutral20502019}. Wind Turbines may be one solution for this, as they are a clean and renewable energy source, with basically no greenhouse gas emissions \cite{pryorClimateChangeImpacts2020}.
     Therefore, Germany aims to increase the share of renewable energy sources. One spatial aspect is to allocate 2\% of the land area for wind energy, with the goal to produce by the end of 2030 115GW of wind energy \cite{WindenergieLand}.
     %In the free state of Saxony currently there a no central rules in place for wind turbine allocation, instead the authority is given to the local planning associations \cite{fachagenturwindenergieFachagenturWindenergieLand}. Todo: Wie ist das für NRW?
-    In NRW there is currently the so called "Windenergieerlass" \cite{nrwErlassFurPlanung} in place, which regulates the allocation of wind turbines in NRW, with the goal to make the planning of Wind Turbines more orientated towards residents and environmental protection \cite{fachagenturwindenergieFachagenturWindenergieLand}
-    \subsection{con terra affilations in NRW}
+    In NRW there is currently the so called "Windenergieerlass" \cite{nrwErlassFurPlanung} in place, which regulates the allocation of wind turbines in NRW, with the goal to make the planning of Wind Turbines more orientated towards residents and environmental protection \cite{fachagenturwindenergieanlandFachagenturWindenergieLand}.
+
+    Also, as previously mentioned, placing wind turbines is often problematic because of local communities. But a recent survey done by the "Fachagentur Wind an Land" discovered that overall in germany onshore wind turbines are widely accepted with over 81\%. Also the acceptance of local communities for already placed Wind Turbines is very high, with an acceptance of over 80\%. The survey also finds that the acceptance of already placed wind turbines is higher than the one of planned ones \cite{fachagenturwindenergieanlandUmfrageZurAkzeptanz}.
+    \subsection{con terra Affiliations NRW}
+    In addition to various other projects within NRW, cCon terra is currently engaged in a digital twin project aimed at enhancing hazard defense mechanisms in the region. As part of this initiative, con terra has access to several high-quality datasets, including the comprehensive i3s Mesh for NRW.
+
+
     \section{Research Questions}
     % Reicht das als research question? 
     Following that the specific research question to be answered by the thesis are:
@@ -167,9 +177,9 @@
 
     The initial segment of the study will employ qualitative methods, involving at least five participants. There will be no prerequisites for participation, particularly concerning their pre-existing opinions on wind power plants. This phase will adopt a Task Analysis approach, where participants will be assigned a series of tasks to complete using the digital twin. These tasks will be designed to test all facets of the digital twin. Throughout the task completion process, participants will be observed, and the observer will take detailed notes on user interactions and experiences. Post-task, participants will be requested to complete a questionnaire, providing feedback on their experience and rating the software.
 
-    The second segment of the study will adopt a quantitative approach, utilizing the same participant group. Participants will complete a questionnaire both before and after using the software. This questionnaire will gauge their opinions on wind power plants, designed to measure any shifts in perspective resulting from the software interaction. The comparative analysis of the pre- and post-use questionnaires will reveal any changes in opinion attributable to the digital twin.
+    The second segment of the study will also follow a qualitative approach, utilizing the same participant group. Participants will complete a questionnaire both before and after using the software. The questionnaire will assess their opinions on wind power plants, with the objective of measuring any shifts in perspective resulting from the software interaction. The comparative analysis of the pre- and post-use questionnaires will reveal any changes in opinion attributable to the digital twin.
 
-    Finally, the study outcomes will be thoroughly evaluated. For the first part, evaluation will be based on observational notes and questionnaire responses. For the second part, a comparative analysis of the pre- and post-use questionnaire results will be conducted. The findings will address the research questions, evaluating both the usability of the digital twin and its influence on public opinion regarding wind power plants. Additionally, recommendations for software improvement will be provided, though the implementation of these improvements will fall outside the scope of this thesis.
+    Finally, the study outcomes will be thoroughly evaluated. As the study will be done as a qualitative study, the user input will pre preprocessed and the results interpreted. The findings will address the research questions, evaluating both the usability of the digital twin and its influence on public opinion regarding wind power plants. Additionally, recommendations for software improvement will be provided, though the implementation of these improvements will fall outside the scope of this thesis.
 
 
     \section{Timeline}
