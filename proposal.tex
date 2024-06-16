@@ -15,6 +15,9 @@
 \usepackage{enumitem}
 \usepackage{cleveref}
 \usepackage{pdflscape}
+\usepackage{amsmath}
+\usepackage{array}
+
 \usepackage{appendix}
 \usepackage[backend=biber, style=ieee, sorting=none, url=true]{biblatex}
 \addbibresource{proposal.bib} % Imports bibliography file
@@ -107,7 +110,17 @@
     \end{questions}
     The primary objective of \ref{rq:first_q} is to assess the interaction between non-expert users and a contemporary, intuitive digital twin. Following an experimental research approach, the evaluation will focus on the usability of the digital twin, with a specific emphasis on the ease with which users can interact with and comprehend the application. Consequently, the focus will be solely on the interaction with the digital twin.
     \ref{rq:second_q} aims to investigate the influence of the digital twin on public opinion concerning wind energy. Employing an experimental research methodology, influence in this context refers to any measurable changes in attitude and support for wind energy initiatives resulting from the interaction with the digital twin.
-    Both research questions will be addressed through a user study, which will be conducted as an integral component of the thesis, adhering to the principles of experimental research design \cite{lazarResearchMethodsHuman2017}
+    Both research questions will be addressed through a user study, which will be conducted as an integral component of the thesis, adhering to the principles of experimental research design \cite{lazarResearchMethodsHuman2017}.
+
+
+    For \ref{rq:first_q} their will be no null or alternative hypothesis, as this follows a more explorative approach.
+    For \ref{rq:second_q} it is the following:
+ 
+    \begin{align}
+        H_0 &: \text{Digital twins do not significantly influence public support for wind energy projects.} \\
+        H_1 &: \text{Digital twins significantly influence public support for wind energy projects.}
+        \end{align}
+
 
     \section{Objectives}
     \subsection{General Objective}
@@ -182,7 +195,9 @@
     \subsection{User Study}
     As part of this thesis, a user study will be conducted to address the primary research questions \cref{rq:first_q} and \cref{rq:second_q}. The study will be divided into two distinct parts. The first part will concentrate on evaluating the usability of the digital twin, assessing user comprehension and experience across all aspects of the digital twin. The second part will investigate the impact of the digital twin on public opinion regarding wind power plants, examining whether users' opinions shift after interacting with the software.
 
-    The initial segment of the study will employ qualitative methods, involving at least five participants. There will be no prerequisites for participation, particularly concerning their pre-existing opinions on wind power plants. This phase will adopt a Task Analysis approach, where participants will be assigned a series of tasks to complete using the digital twin. These tasks will be designed to test all facets of the digital twin. Throughout the task completion process, participants will be observed, and the observer will take detailed notes on user interactions and experiences. Post-task, participants will be requested to complete a questionnaire, providing feedback on their experience and rating the software.
+    The initial segment of the study will employ qualitative methods, involving at least five participants. There will be no prerequisites for participation, particularly concerning their pre-existing opinions on wind power plants. This phase will adopt a Task Analysis approach, where participants will be assigned a series of tasks to complete using the digital twin. These tasks will be designed to test all facets of the digital twin. Throughout the task completion process, participants will be observed, and the observer will take detailed notes on user interactions and experiences. Measured here will be especially
+    Post-task, participants will be requested to complete a questionnaire, providing feedback on their experience and rating the software.
+  
 
     The second segment of the study will also follow a qualitative approach, utilizing the same participant group. Participants will complete a questionnaire both before and after using the software. The questionnaire will assess their opinions on wind power plants, with the objective of measuring any shifts in perspective resulting from the software interaction. Additionally, at the end there will be an interview witch each participant. The comparative analysis of the pre- and post-use questionnaires and the interview will reveal any changes in opinion attributable to the digital twin.
 
