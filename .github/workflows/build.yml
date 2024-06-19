@@ -1,37 +1,32 @@
 name: LaTeX PDF Build
-
 on:
   push:
     branches:
       - main
   workflow_dispatch:
-
 permissions:
   contents: write  # This permission allows workflows to upload assets, create releases, etc.
-
 jobs:
   build_pdf:
     runs-on: ubuntu-latest
     container:
       image: docker.io/texlive/texlive:latest
-
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
-
     - name: Compile LaTeX document to PDF
       run: |
-        pdflatex -interaction=nonstopmode proposal.tex 
+        pdflatex -interaction=nonstopmode proposal.tex
         biber proposal
         pdflatex -interaction=nonstopmode proposal.tex  
+        makeglossaries proposal
         pdflatex -interaction=nonstopmode proposal.tex  
-
     - name: Upload PDF as Artifact
       uses: actions/upload-artifact@v3
       with:
         name: compiled-pdf
         path: '*.pdf'
-    
+   
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
@@ -42,8 +37,7 @@ jobs:
         release_name: Release ${{ github.ref_name }}-${{ github.sha }}
         draft: false
         prerelease: false
-  
-
+ 
     - name: Upload PDF to Release
       uses: actions/upload-release-asset@v1
       env:

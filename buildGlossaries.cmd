@@ -1,0 +1,2 @@
+cd .aux
+makeglossaries proposal
