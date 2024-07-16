@@ -29,7 +29,7 @@
     breaklinks=true
 }
 
-\title{The Role of Digital Twins in Modulating Public Opinion on Wind Power Plants}
+\title{Visualizing Wind Energy: Digital Twins as Tools for Public Engagement}
 \author{Emily Sterthaus \\ Matriculation Number: 451 342 \\ \href{mailto:m_ster15@uni-muenster.de}{m\_ster15@uni-muenster.de}}
 \affil{Institute of Geoinformatics, University of Münster}
 \date{\today}
@@ -79,7 +79,7 @@
     turbines need a minimum distance between each other
     \cite{niedersachsischesministeriumfurumweltenergieundklimaschutzPlanungUndGenehmigung2021}.
 
-    However, the public perception of wind turbines is often negative, with many people citing noise pollution, visual impairment as reason for their opposition to wind power plants. This is despite the fact that wind power is a clean, renewable energy source that can help to reduce greenhouse gas emissions and combat climate change.
+    However, the public perception of wind turbines is often negative, with many people citing noise pollution, visual impact as reason for their opposition to wind power plants. This is despite the fact that wind power is a clean, renewable energy source that can help to reduce greenhouse gas emissions and combat climate change.
 
     This leads to a situation where the siting of wind turbines is often met with resistance from local communities, who may be concerned about the impact of the turbines on their quality of life. Which makes it a heavy politicized issue, with local governments often facing opposition from residents when trying to approve new wind power projects \cite{kwasniewskiWindenergieVerhindertAntiWindkraftBewegung2021}.
 
@@ -90,7 +90,7 @@
     Digital twins have been adopted across various disciplines, including manufacturing, the automotive industry, and the energy sector, addressing different challenges within each field. As accurate replicas of the real world, they are particularly effective for integrating solutions into complex analyses and providing decision support \cite{pylianidisIntroducingDigitalTwins2021}.
 
     \subsection{Technical Aspects}
-    A fundamental aspect of this thesis is the utilization of 3D Meshes, specifically \gls{ogc} \gls{i3s} meshes. The \gls{i3s} format facilitates the streaming and distribution of 3D content across various (enterprise) systems. A single \gls{i3s} dataset, referred to as a scene layer, serves as a container for extensive and diverse 3D geographic data. To fully define a scene layer, both a layer type and a layer profile are required. 
+    A fundamental aspect of this thesis is the utilization of 3D Meshes, specifically \gls{ogc} \gls{i3s} meshes. The \gls{i3s} format facilitates the streaming and distribution of 3D content across various (enterprise) systems. A single \gls{i3s} dataset, referred to as a scene layer, serves as a container for extensive and diverse 3D geographic data. To fully define a scene layer, both a layer type and a layer profile are required.
     The \gls{i3s} format supports various data types, including 3D objects, integrated meshes, point clouds, and building scene layers. It is designed with web, mobile, and cloud use cases in mind. Although it is developed by Esri, it is also part of the \gls{ogc} standards \cite{esriincI3sspec}.
 
     Given that map.apps is based on Esri's ArcGIS Maps SDK for JavaScript, integrating an \gls{i3s} layer into the application is straightforward. The ArcGIS Maps SDK for JavaScript also provides additional analysis tools when an ArcGIS Enterprise environment is available. Particularly relevant to this project are the shadow analysis \cite{esriincShadowCast} and viewshed analysis tools \cite{esriincGeoprocessingViewshedAnalysis}.
@@ -101,7 +101,7 @@
     Germany, in particular, aims to significantly increase its share of renewable energy. A spatial strategy involves allocating 2\% of the land area for wind energy, with the objective of producing 115 GW of wind energy by the end of 2030 \cite{WindenergieLand}.
 
 
-    In \gls{nrw}, the "Windenergieerlass" (Wind Energy Decree) \cite{nrwErlassFurPlanung} regulates the allocation of wind turbines. This administrative regulation aims to balance the planning of wind turbines with considerations for residents and environmental protection \cite{nrwErlassFurPlanung}. 
+    In \gls{nrw}, the "Windenergieerlass" (Wind Energy Decree) \cite{nrwErlassFurPlanung} regulates the allocation of wind turbines. This administrative regulation aims to balance the planning of wind turbines with considerations for residents and environmental protection \cite{nrwErlassFurPlanung}.
 
     Despite the challenges associated with the placement of wind turbines due to local community concerns, a recent survey revealed that onshore wind turbines are widely accepted across Germany, with over 81\% approval. Additionally, local community acceptance for existing wind turbines is high, with approval rates exceeding 80\%. The survey also indicates that the acceptance of existing wind turbines is higher than that of planned ones \cite{fachagenturwindenergieanlandUmfrageZurAkzeptanz}.
 
@@ -116,7 +116,7 @@
 
     \begin{questions}
         \item \label{rq:first_q} How effectively does the implemented digital twin interface enable non-expert users to accurately interpret and manipulate key wind energy parameters?
-        \item \label{rq:second_q} To what extent can a digital twin of a wind power plant influence public support for wind energy projects?
+
     \end{questions}
 
     \subsection{Specification of Research Questions}
@@ -135,26 +135,12 @@
 
     For \ref{rq:first_q}, there will be no null or alternative hypothesis, as this follows a more exploratory approach.
 
-    \subsubsection{RQ2: Influence on Public Opinion}
-
-    \ref{rq:second_q} aims to investigate the influence of the digital twin on public opinion concerning wind energy. Employing an experimental research methodology, influence in this context refers to any measurable changes in attitude and support for wind energy initiatives resulting from the interaction with the digital twin.
-
-    For \ref{rq:second_q}, the following hypotheses are proposed:
-
-    \begin{align}
-        H_0 & : \text{Digital twins do not significantly influence public support for wind energy projects.} \\
-        H_1 & : \text{Digital twins significantly influence public support for wind energy projects.}
-    \end{align}
-
-    \subsection{Research Methodology}
-
-    Both research questions will be addressed through a user study, which will be conducted as an integral component of the thesis, adhering to the principles of experimental research design \cite{lazarResearchMethodsHuman2017}.
 
     \section{Objectives}
     \subsection{General Objective}
     The objective of this research is to explore the potential of digital twins to impact public opinion regarding wind energy installations. The project involves the development of a digital twin for a wind power facility to accurately simulate and visualize its environmental effects. This research is designed to provide stakeholders with a detailed assessment of both the benefits and limitations associated with wind turbines, thereby aiding in the decision-making process for future developments.
 
-    A digital twin is conceived as an interactive 3D application that allows users to traverse a specified test area, install turbines, and observe their influence on the local environment. The application is equipped to simulate aspects such as noise pollution and visual impairments, which include changes in the landscape and shadow effects caused by the turbines.
+    A digital twin is conceived as an interactive 3D application that allows users to traverse a specified test area, install turbines, and observe their influence on the local environment. The application is equipped to simulate aspects such as noise pollution and visual impacts, which include changes in the landscape and shadow effects caused by the turbines.
 
     %Additionally, the digital twin will evaluate the risk of bird strikes and analyze the energy output and potential savings over determined periods. 
     % Wurde entfernt aufgrund holgers feedback, bin mir nicht sicher wie ich das  einbauen soll
@@ -173,7 +159,7 @@
     As the goals beforehand describe the general objective of the thesis, the SMART objectives will describe the specific goals of the thesis. The SMART objectives are as follows:
     \begin{itemize}[label={--}]
         \item Develop a digital twin interactive 3D application  that allows users to navigate a specific test area and place turbines to assess their visual and noise impact on the surroundings.
-        \item Implement a feature  in the digital twin to simulate the visual impairment caused by wind turbines, including shadow casting and changes to the landscape.
+        \item Implement a feature  in the digital twin to simulate the visual impact caused by wind turbines, including shadow casting and changes to the landscape.
         \item Introduce a noise pollution simulation within the digital twin to quantify the acoustic impact of wind turbines at various distances and under different weather conditions.
         \item Integrate an energy analysis tool into the digital twin  that calculates real-time energy generation and potential energy savings from placed turbines over specified periods.
         \item Incorporate a legal assessment tool  in the digital twin to verify turbine placements against local regulations and zoning requirements.
@@ -211,7 +197,7 @@
 
 
     \subsection{Development}
-    The digital twin will be developed as a map.apps application, leveraging its capabilities for interactive 3D application development. The selection of map.apps, a proprietary product developed by con terra, was driven by several factors. Primarily, its foundation on the ArcGIS JavaScript API offers significant advantages. This  enables the visualization of any 3D environment within local Coordinate Reference Systems, specifically \gls{epsg}: 3857, which is mandated by German law. Currently, other open-source tools, such as CesiumJS, do not support this capability. Furthermore, map.apps supports one of the common standards for 3D meshes, Esri/\gls{ogc}'s \gls{i3s}. While 3D tiles present an alternative to \gls{i3s}, within the map.apps environment, they do not offer any additional benefits. The primary development efforts will focus on the creation of isolated bundles, each tailored to specific functionalities required for the digital twin. These functionalities include a noise simulation, a visual impairment simulation, an energy analysis tool, a legal assessment tool, an inter-turbine interaction module, and the user interface. The development will predominantly involve JavaScript/TypeScript, complemented by HTML and CSS for crafting the user interface. The principal frontend components will be designed as Vue components.
+    The digital twin will be developed as a map.apps application, leveraging its capabilities for interactive 3D application development. The selection of map.apps, a proprietary product developed by con terra, was driven by several factors. Primarily, its foundation on the ArcGIS JavaScript API offers significant advantages. This  enables the visualization of any 3D environment within local Coordinate Reference Systems, specifically \gls{epsg}: 3857, which is mandated by German law. Currently, other open-source tools, such as CesiumJS, do not support this capability. Furthermore, map.apps supports one of the common standards for 3D meshes, Esri/\gls{ogc}'s \gls{i3s}. While 3D tiles present an alternative to \gls{i3s}, within the map.apps environment, they do not offer any additional benefits. The primary development efforts will focus on the creation of isolated bundles, each tailored to specific functionalities required for the digital twin. These functionalities include a noise simulation, a visual impact simulation, an energy analysis tool, a legal assessment tool, an inter-turbine interaction module, and the user interface. The development will predominantly involve JavaScript/TypeScript, complemented by HTML and CSS for crafting the user interface. The principal frontend components will be designed as Vue components.
 
     The infrastructure necessary for this project, including the map.apps installation, ArcGIS Enterprise, \gls{fme}, and the required servers, will be provided by con terra.
 
@@ -221,21 +207,18 @@
     %Todo: Wie führt man eine User Study durch?
     %Todos: Studien Art? Gibt es eine kontrollgrupe? Wie sieht die studie aus? Wie viele teilnehmer? Wie werden die teilnehmer ausgewählt? Wie wird die studie ausgewertet?
     \subsection{User Study}
-    As part of this thesis, a user study will be conducted to address the primary research questions \cref{rq:first_q} and \cref{rq:second_q}. The study will be divided into two distinct parts. The first part will concentrate on evaluating the usability of the digital twin, assessing user comprehension and experience across all aspects of the digital twin. The second part will investigate the impact of the digital twin on public opinion regarding wind power plants, examining whether users' opinions shift after interacting with the software.
+    As part of this thesis, a user study will be conducted to address the primary research question \cref{rq:first_q}. The study will be divided into two distinct parts. The first part will concentrate on evaluating the usability of the digital twin, assessing user comprehension and experience across all aspects of the digital twin.
     The study will not employ any specific selection criteria for participants. All participants will interact with an identical version of the digital twin system, without any randomization or variation in experimental conditions between subjects. There will be no designated control groups in this study design. As such, the sampling method employed in this study can be considered non-probabilistic sampling. To compensate for the limitations of this sampling method, demographic data will be collected from the participants. \cite{lazarResearchMethodsHuman2017}. The selection of participants would be likely to be convenience sampling from colleagues at con terra and other students.
     The study will involve a maximum of five participants, as it is suggested that five individuals can identify 80\% of the flaws \cite{virziRefiningTestPhase1992}. Moreover, research indicates that even 3.2 participants represent the optimal number for the best cost-benefit ratio \cite{nielsenMathematicalModelFinding1993}.
-    The study will be conducted entirely remotely. Each participant will share their audio, screen, and camera, which will be recorded for subsequent analysis. 
+    The study will be conducted entirely remotely. Each participant will share their audio, screen, and camera, which will be recorded for subsequent analysis.
     To maintain anonymity of each participant and ensure data privacy all datasets will be stored securely and only researchers directly involved in the study will have access to the raw data. After pre-processing and evaluation the raw datasets will be deleted, and only the anonymized results will be stored for further analysis. The results will be then interpreted and evaluated to address the research questions. Each participant can withdraw from the study until the data is fully anonymized. At this point it is technically impossible to withdraw from the study. The study will be conducted in accordance with the ethical guidelines of the University of Münster. Each user will need to be Informed about these aspects and consent to it. %Ich weiß das es das gibt, sollte mir das ding auch wirklich mal genauer angucken.. 
 
     %Bin mir sehr unsicher ob jetzt formative oder summative testing. Ich denke formative testing, da ich ja noch nicht wirklich weiß wie gut das ganze funktioniert
 
-    The first phase of the study, addressing \cref{rq:first_q}, will involve conducting usability testing and formative evaluation utilizing the high-fidelity prototype. It will employ qualitative methods. This phase will adopt a Task Analysis approach, where participants will be assigned a series of tasks to complete using the digital twin. These tasks will be designed to test all facets of the digital twin. Throughout the task completion process, participants will be observed, and the observer will take detailed notes on user interactions and experiences. Measured here will be especially task completion rates, error rates, and time on task.
+    The study will involve conducting usability testing and formative evaluation utilizing the high-fidelity prototype. It will employ qualitative methods. This phase will adopt a Task Analysis approach, where participants will be assigned a series of tasks to complete using the digital twin. These tasks will be designed to test all facets of the digital twin. Throughout the task completion process, participants will be observed, and the observer will take detailed notes on user interactions and experiences. Measured here will be especially task completion rates, error rates, and time on task.
     Post-task, participants will be requested to complete a questionnaire, providing feedback on their experience and rating the software. Additionally, this part of the study may be augmented by an expert-based testing with con terra`s UX experts. This will provide additional insights into the usability of the digital twin, allowing for a more comprehensive evaluation of the application's user-friendliness and effectiveness \cite{lazarResearchMethodsHuman2017}.
     %Specifically tested will be for depending variables such as: efficiency, accuracy and learnability  \cite{lazarResearchMethodsHuman2017}.
 
-    The subsequent phase of the study, which addresses \cref{rq:second_q}, will employ an experimental research methodology \cite{lazarResearchMethodsHuman2017}. It will be a qualitative user study, utilizing the same participant group. Participants will complete a questionnaire both before and after using the software. The questionnaire will assess their opinions on wind power plants, with the objective of measuring any shifts in perspective resulting from the software interaction. Additionally, at the end there will be an interview witch each participant. The comparative analysis of the pre- and post-use questionnaires and the interview will reveal any changes in opinion attributable to the digital twin.
-    %Irgendwie will ich die wohl messen aber auch nicht so richtig.. Will ja wissen wie sehr sich die meinung geändert hat
-    Specifically tested will be for depending variables such as: cognitive demand, satisfaction and learnability  \cite{lazarResearchMethodsHuman2017}.
 
     Finally, the study outcomes will be thoroughly evaluated. As the study will be done as a qualitative study, the user input will pre preprocessed and the results interpreted. The evaluation will be partly done as Thematic Content Analysis \cite{lazarResearchMethodsHuman2017}. The findings will address the research questions, evaluating both the usability of the digital twin and its influence on public opinion regarding wind power plants. Additionally, recommendations for software improvement will be provided, though the implementation of these improvements will fall outside the scope of this thesis.
 
@@ -250,37 +233,44 @@
     The detailed tasks for each project phase are outlined in the following sections:
 
     \begin{itemize}
-        \item \textbf{Documentation and Note-taking:} This phase spans the entire duration of the thesis and involves comprehensive documentation of the research process, results, and conclusions. The primary outcome will be the thesis itself, along with any additional documentation required for the project. It also includes taking detailed notes on project progress and any pertinent information that arises during the research.
-        \item \textbf{Data Acquisition:} This initial phase, lasting four weeks, focuses on collecting the necessary datasets for the development of the digital twin. This includes terrain data, meteorological data, land use classifications, and wind turbine specifications, sourced from previously identified providers.
-        \item \textbf{Dataset Implementation:} Over the course of 2 weeks, this phase involves integrating the acquired datasets into the digital twin. Tasks include preparing, cleaning, and transforming the data to ensure compatibility with the application.
-        \item \textbf{Evaluation of Legal Restrictions:} Spanning four weeks, this phase involves a thorough assessment of legal restrictions and zoning regulations applicable to wind turbine placement in the specified area.
-        \item \textbf{Implementation of Legal Restrictions:} This three weeks phase entails incorporating the evaluated legal restrictions and zoning regulations into the digital twin, ensuring the application can verify turbine placements against local regulations.
-        \item \textbf{Implementation of Visual Analyses:} This phase, also spanning three weeks, focuses on the implementation of visual-based analyses, including visual impairment simulations (notably Line Of Sight and Viewshed Analysis) and shadow casting simulations. These analyses further verify turbine placements against local regulations and allow stakeholders to visualize the impact of the turbines on the landscape.
-        \item \textbf{Implementation of Noise Analyses:} During this three weeks phase, noise-based analyses are implemented, including noise pollution simulations. These simulations enable stakeholders to assess the acoustic impact of wind turbines at various distances.
-        \item \textbf{Gather Testing Group:} This phase, which spans six weeks, involves recruiting participants for the user study. The testing group will be selected based on specific criteria to ensure a diverse and representative sample.
-        \item \textbf{Creating User Study:} Over the course of three weeks, the user study will be designed, including the development of questionnaires and tasks for participants.
-        \item \textbf{User Study:} This four-week phase involves conducting the user study, where participants will interact with the digital twin and complete the assigned tasks.
-        \item \textbf{Evaluation of User Study:} The final phase, lasting three weeks, involves evaluating the user study results to determine the impact of the digital twin on participants opinions regarding wind power plants. The findings will be analysed and used to address the research questions.
+        \item \textbf{\color{purple}Literature Review and Initial Writing:} This phase will encompass a comprehensive literature review and the beginning of thesis writing. It will run concurrently with the evaluation of legal restrictions, as these two activities are intrinsically linked.
+        \item \textbf{\color{green}Data Acquisition:} This stage will focus on gathering the required datasets for the digital twin development, ensuring a robust foundation for subsequent analyses.
+        \item \textbf{\color{green}Dataset Integration:} This phase will concentrate on the integration and preprocessing of the acquired datasets into the digital twin.
+        \item \textbf{\color{purple}Legal Framework Analysis:} This stage will involve an in-depth literature review and analysis of the pertinent legal restrictions and regulations governing wind turbine placement and operation.
+        \item \textbf{\color{green}Legal Constraints Implementation:} This phase will focus on translating the analyzed legal framework into algorithmic constraints within the digital twin, ensuring compliance with regulatory requirements.
+        \item \textbf{\color{green}Visual Impact Analysis Implementation:} This stage will involve the development and integration of visual impact assessment tools within the digital twin.
+        \item \textbf{\color{green}Acoustic Impact Analysis Implementation:} This phase will concentrate on implementing noise propagation models and analyses within the digital twin.
+        \item \textbf{\color{purple}Methodology and Implementation Documentation:} This writing phase will focus on documenting the methodological approaches and technical implementations of the digital twin components.
+        \item \textbf{\color{orange}Participant Recruitment:} This stage will involve the identification and recruitment of suitable participants for the user study.
+        \item \textbf{\color{orange}User Study Design:} This phase will encompass the design of a comprehensive user study protocol, including task development, questionnaire formulation, and ethical considerations.
+        \item \textbf{\color{orange}User Study Execution:} This stage will involve the practical execution of the user study.
+        \item \textbf{\color{orange}User Study Data Analysis:} This phase will focus on the systematic analysis of collected user study data.
+        \item \textbf{\color{purple}Results Documentation and Thesis Finalization:} This final writing phase will involve the detailed documentation of user study results, discussion of findings, and completion of the thesis.
     \end{itemize}
     \begin{landscape}
         \begin{figure}[h]
             \centering
             \begin{ganttchart}[
-                    hgrid,
-                    vgrid={*1{dotted}},
-                    x unit=1.0cm, % Adjust this value to fit the chart properly
-                    y unit chart=0.75cm,
-                    y unit title=0.75cm,
-                    bar/.append style={fill=barblue},
-                    group/.append style={fill=groupblue},
-                    link/.style={-latex, linkred},
-                    inline,
-                    bar label font=\footnotesize, % This reduces the font size of bar labels
-                    title label font=\footnotesize, % This reduces the font size of title labels
-                    title height=1,
-                    milestone/.append style={shape=diamond, fill=orange, inner sep=1.5pt}
+                hgrid,
+                vgrid={dotted}, % Fixed: Removed the '1' before 'dotted'
+                x unit=0.8cm, % Adjust this value to fit the chart properly
+                y unit chart=0.75cm,
+                y unit title=0.75cm,
+                bar/.append style={fill=barblue},
+                group/.append style={fill=groupblue},
+                link/.style={-latex, linkred},
+                inline,
+                bar label font=\footnotesize, % This reduces the font size of bar labels
+                title label font=\footnotesize, % This reduces the font size of title labels
+                title height=1,
+                milestone/.append style={shape=diamond, fill=orange, inner sep=1.5pt},
+                bar label node/.append style={align=left},
+                bar inline label node/.append style={left=2.5cm}
+                research/.style={bar/.append style={fill=blue!60}},
+                implementation/.style={bar/.append style={fill=green!60}},
+                userstudy/.style={bar/.append style={fill=orange!60}},
+                writing/.style={bar/.append style={fill=purple!60}},
                 ]{1}{24} % Adjust the range to cover 24 weeks
-
                 % Custom titles for weeks
                 \gantttitle{W1}{1}
                 \gantttitle{W2}{1}
@@ -306,32 +296,39 @@
                 \gantttitle{W22}{1}
                 \gantttitle{W23}{1}
                 \gantttitle{W24}{1} \\
-
-                \ganttbar[name=writing]{Writing and Taking Notes}{1}{24} \\
-                \ganttbar[name=acquiring]{Acquiring Data}{1}{4} \\
-                \ganttbar[name=impl_datasets]{Impl. Datasets}{5}{6} \\
-                \ganttmilestone[name=data_comp]{Datasets Complete}{6} \\
-                \ganttbar[name=eval_legal]{Eval. Legal Restrictions}{1}{4} \\
-                \ganttbar[name=impl_legal]{Impl. Legal Restrictions}{5}{7} \\
-                \ganttbar[name=impl_visual]{Impl. Visual Analyses}{8}{10} \\
-                \ganttbar[name=impl_noise]{Impl. Noise Analyses}{10}{12} \\
-                \ganttmilestone[name=prot_comp]{Prototype Complete}{12} \\
-                \ganttbar[name=gathering_users]{Gather Testing Group}{10}{15} \\
-                \ganttbar[name=user_study_prep]{Creating User Study}{13}{15} \\
-                \ganttbar[name=user_study_prep]{User Study}{16}{19} \\
-                \ganttbar[name=user_study_prep]{Eval. User Study}{20}{22} \\
-                \ganttmilestone[name=study_comp]{User Study Complete}{22} \\
-
+                \ganttbar[name=writing, inline=false, writing]{Writing}{1}{2} \\
+                \ganttbar[name=acquiring, inline=false, implementation]{Acq. Data}{3}{3} \\
+                \ganttbar[name=impl_datasets, inline=false, implementation]{Impl. Datasets}{4}{4} \\
+                \ganttmilestone[name=data_comp, inline=false]{Datasets Complete}{4} \\
+                \ganttbar[name=eval_legal, inline=false, writing]{Eval. Legal Restrictions}{1}{4} \\
+                \ganttbar[name=impl_legal, inline=false, implementation]{Impl. Legal Restrictions}{5}{7} \\
+                \ganttbar[name=impl_visual, inline=false, implementation]{Impl. Visual Analyses}{8}{9} \\
+                \ganttbar[name=impl_noise, inline=false, implementation]{Impl. Noise Analyses}{10}{10} \\
+                \ganttmilestone[name=prot_comp, inline=false]{Prototype Complete}{10} \\
+                \ganttbar[name=writing2, inline=false, writing]{Writing}{11}{12} \\
+                \ganttbar[name=gathering_users, inline=false, userstudy]{Gather Testing Group}{12}{13} \\
+                \ganttbar[name=user_study_prep, inline=false, userstudy]{Creating User Study}{14}{15} \\
+                \ganttbar[name=user_study, inline=false, userstudy]{User Study}{16}{17} \\
+                \ganttbar[name=user_study_eval, inline=false, userstudy]{Eval. User Study}{18}{19} \\
+                \ganttmilestone[name=study_comp, inline=false]{User Study Complete}{19} \\
+                \ganttbar[name=writing3, inline=false, writing]{Writing}{20}{24} \\
                 % Add links
                 \ganttlink{acquiring}{impl_datasets}
                 \ganttlink{eval_legal}{impl_legal}
-
             \end{ganttchart}
+            \vspace{1cm} % Add some vertical space between the chart and the legend
+            \begin{tikzpicture}[legend entry/.style={fill=#1,draw=black,rectangle,minimum width=1cm,minimum height=0.5cm}]
+                \node[legend entry=green!60] at (0,0) {};
+                \node[right] at (0.5,0) {Implementation};
+                \node[legend entry=orange!60] at (4,0) {};
+                \node[right] at (4.5,0) {User Study};
+                \node[legend entry=purple!60] at (8,0) {};
+                \node[right] at (8.5,0) {Writing};
+            \end{tikzpicture}
             \caption{Schedule of my Master Thesis}
             \label{fig:time_shedule}
         \end{figure}
     \end{landscape}
-
 
 
 \end{linenumbers}
